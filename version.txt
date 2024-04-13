@@ -1,0 +1,3 @@
+version: 0.1.0
+- project creation
+- added robotframework and selenium library to dependencies
