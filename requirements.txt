@@ -1,0 +1,10 @@
+isort==5.13.2
+mypy==1.10.0
+pylint==3.1.0
+pyright==1.1.360
+robotframework==7.0
+robotframework-robocop==5.0.4
+robotframework-seleniumlibrary==6.3.0
+robotframework-stacktrace==0.4.1
+robotframework-tidy==4.11.0
+ruff==0.4.2
