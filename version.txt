@@ -1,3 +1,7 @@
+version: 1.0.1
+- added robotframework-stacktrace that prints a Stack Trace to console
+- added requirements.txt as option for getting project requirements
+
 version: 1.0.0
 - added linters: pylint, ruff, robotframework-robocop
 - added type checkers: mypy, pyright
