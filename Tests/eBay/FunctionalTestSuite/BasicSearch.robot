@@ -11,9 +11,12 @@ Verify basic search functionality for eBay.
     [Tags]    functional
 
     Open Browser    https://www.ebay.com/    chrome
+    Maximize Browser Window
+
     Input Text    //*[@id="gh-ac"]    ${TEXT}
     Press Keys    //*[@id="gh-btn"]    Return
     Page Should Contain    результат. для ${TEXT}
+
     Close Browser
 
 *** Keywords ***
