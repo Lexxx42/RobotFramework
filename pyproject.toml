@@ -8,9 +8,54 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.12"
 robotframework = "^7.0"
-robotframework-seleniumlibrary = "^6.2.0"
+robotframework-seleniumlibrary = "^6.3.0"
 
+[tool.poetry.group.formatting.dependencies]
+isort = "^5.13.2"
+robotframework-tidy = "^4.11.0"
+
+[tool.poetry.group.type-checking.dependencies]
+mypy = "^1.10.0"
+pyright = "^1.1.360"
+
+[tool.poetry.group.linting.dependencies]
+pylint = "^3.1.0"
+ruff = "^0.4.2"
+robotframework-robocop = "^5.0.4"
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.mypy]
+plugins = ["pydantic.mypy"]
+warn_redundant_casts = true
+warn_unused_ignores = true
+disallow_any_generics = true
+check_untyped_defs = true
+disallow_untyped_defs = true
+strict = true
+show_error_codes = true
+
+[tool.ruff]
+line-length = 120
+
+[tool.pylint.'FORMAT CHECKER']
+max-line-length=120
+
+[tool.robotidy]
+line_length = 120
+spacecount = 4
+
+[tool.robocop]
+filetypes = [".robot", ".resource"]
+configure = [
+    "line-too-long:line_length:120",
+    "too-many-calls-in-test-case:max_calls:15"
+]
+exclude = [
+    "missing-doc-suite",
+    "missing-doc-test-case",
+    "missing-doc-keyword",
+    "too-few-calls-in-test-case"
+]
