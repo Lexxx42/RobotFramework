@@ -3,6 +3,9 @@ Documentation    Basic search functionality on ebay.
 Resource    ../../../Resources/CommonFunctionality.resource
 Resource    ../../../Resources/eBayKeywords.resource
 
+Test Setup    CommonFunctionality.Start test case    https://www.ebay.com/
+Test Teardown    CommonFunctionality.Finish test case
+
 *** Variables ***
 ${TEXT}    Mobile
 
@@ -11,8 +14,6 @@ Verify basic search functionality for eBay.
     [Documentation]    This test case verifies basic search functionality.
     [Tags]    functional
 
-    Start test case    https://www.ebay.com/
-    Verify search results    Mobile
-    Filter results by condition
-    Verify filter results
-    Finish test case
+    eBayKeywords.Verify search results    Mobile
+    eBayKeywords.Filter results by condition
+    eBayKeywords.Verify filter results
