@@ -1,6 +1,7 @@
 *** Settings ***
 Documentation    Basic search functionality on ebay.
-Library    SeleniumLibrary
+Resource    ../../../Resources/CommonFunctionality.resource
+Resource    ../../../Resources/eBayKeywords.resource
 
 *** Variables ***
 ${TEXT}    Mobile
@@ -10,19 +11,8 @@ Verify basic search functionality for eBay.
     [Documentation]    This test case verifies basic search functionality.
     [Tags]    functional
 
-    Start TestCase
-    Verify Search Results
-    Finish TestCase
-
-*** Keywords ***
-Start TestCase
-    Open Browser    https://www.ebay.com/    chrome
-    Maximize Browser Window
-
-Verify Search Results
-    Input Text    css:#gh-ac    ${TEXT}
-    Press Keys    xpath://*[@id="gh-btn"]    Return
-    Page Should Contain    результат. для ${TEXT}
-
-Finish TestCase
-    Close Browser
+    Start test case    https://www.ebay.com/
+    Verify search results    Mobile
+    Filter results by condition
+    Verify filter results
+    Finish test case
