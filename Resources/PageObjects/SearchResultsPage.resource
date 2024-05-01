@@ -1,6 +1,7 @@
 *** Settings ***
 Documentation    Common functionality for the search results of eBay.
 Library    SeleniumLibrary
+Variables    ../Variables/ebay_constants.py
 
 *** Variables ***
 
@@ -26,3 +27,9 @@ Verify filter results
     [Arguments]    ${text}
 
     Element Should Be Visible    xpath://ul[@class="carousel__list"]//div[text()="${text}"]
+
+Verify filter delivery results
+    [Arguments]    ${text}
+
+    Element Should Be Visible    
+    ...    xpath://ul[@class="carousel__list"]//div[text()="${AVAILABLE_DELIVERY_FILTERS}[${text}]"]
