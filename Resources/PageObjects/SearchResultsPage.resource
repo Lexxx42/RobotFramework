@@ -1,7 +1,9 @@
 *** Settings ***
 Documentation    Common functionality for the search results of eBay.
+Library    String
 Library    SeleniumLibrary
 Variables    ../Variables/ebay_constants.py
+Variables    ../Locators/locators.py
 
 *** Variables ***
 
@@ -14,22 +16,29 @@ Verify search results
 Select product condition
     [Arguments]    ${text}
 
-    Press Keys    xpath://span[text()="Состояние товара"]/ancestor::button    Return
-    Press Keys    xpath://a/span[text()="${text}"]    Return
+    ${locator} =  Format String  ${DROPDOWN_OPTION}    text=${text}
+
+    Press Keys    ${ProductConditionsDropdown}    Return
+    Press Keys    ${locator}    Return
 
 Select delivery option
     [Arguments]    ${text}
 
-    Press Keys    xpath://span[text()="Доставка"]/ancestor::button    Return
-    Press Keys    xpath://a/span[text()="${text}"]    Return
+    ${locator} =  Format String  ${DROPDOWN_OPTION}    text=${text}
+
+    Press Keys    ${ShipmentsDropdown}    Return
+    Press Keys    ${locator}    Return
 
 Verify filter results
     [Arguments]    ${text}
 
-    Element Should Be Visible    xpath://ul[@class="carousel__list"]//div[text()="${text}"]
+    ${locator} =  Format String  ${FILTER_RESULT}    text=${text}
+
+    Element Should Be Visible    ${locator}
 
 Verify filter delivery results
     [Arguments]    ${text}
 
-    Element Should Be Visible    
-    ...    xpath://ul[@class="carousel__list"]//div[text()="${AVAILABLE_DELIVERY_FILTERS}[${text}]"]
+    ${locator} =  Format String  ${FILTER_RESULT}    text=${AVAILABLE_DELIVERY_FILTERS}[${text}]
+
+    Element Should Be Visible    ${locator}
