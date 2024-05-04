@@ -1,0 +1,8 @@
+""" Locators for eBay web tests. """
+SearchField = "css:#gh-ac"
+SearchButton = "xpath://*[@id='gh-btn']"
+AdvancedSearchLink = "xpath://*[@id='gh-as-a']"
+ProductConditionsDropdown = "xpath://span[text()='Состояние товара']/ancestor::button"
+ShipmentsDropdown = "xpath://span[text()='Доставка']/ancestor::button"
+DROPDOWN_OPTION = "xpath://a/span[text()='{text}']"
+FILTER_RESULT = "xpath://ul[@class='carousel__list']//div[text()='{text}']"
