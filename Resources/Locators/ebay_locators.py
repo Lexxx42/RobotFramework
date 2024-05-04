@@ -6,3 +6,4 @@ ProductConditionsDropdown = "xpath://span[text()='Состояние товар�
 ShipmentsDropdown = "xpath://span[text()='Доставка']/ancestor::button"
 DROPDOWN_OPTION = "xpath://a/span[text()='{text}']"
 FILTER_RESULT = "xpath://ul[@class='carousel__list']//div[text()='{text}']"
+SHOPPING_CATEGORY_BUTTON = "xpath://li/a[text()='{text}']"
