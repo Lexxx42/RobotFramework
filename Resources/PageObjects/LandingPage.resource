@@ -1,6 +1,8 @@
 *** Settings ***
 Documentation    Common functionality for the landing page of eBay.
+Library    String
 Library    SeleniumLibrary
+Variables    ../Locators/ebay_locators.py
 
 *** Variables ***
 
@@ -8,4 +10,6 @@ Library    SeleniumLibrary
 Select shopping category
      [Arguments]    ${text}
 
-     Click Element    xpath://li/a[text()="${text}"]
+     ${locator}    Format String    SHOPPING_CATEGORY_BUTTON    text=${text}
+
+     Click Element    ${locator}

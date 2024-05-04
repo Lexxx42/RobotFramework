@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation    Common functionality for the header of eBay.
 Library    SeleniumLibrary
-Variables    ../Locators/locators.py
+Variables    ../Locators/ebay_locators.py
 
 *** Variables ***
 
