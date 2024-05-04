@@ -3,7 +3,7 @@ Documentation    Common functionality for the search results of eBay.
 Library    String
 Library    SeleniumLibrary
 Variables    ../Variables/ebay_constants.py
-Variables    ../Locators/locators.py
+Variables    ../Locators/ebay_locators.py
 
 *** Variables ***
 
