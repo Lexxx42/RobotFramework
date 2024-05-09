@@ -1,3 +1,8 @@
+version: 1.0.2
+- added *.env to .gitignore to ignore secrets vault
+- added python-dotenv to project requirements
+- added module for reading variables from .env file
+
 version: 1.0.1
 - added robotframework-stacktrace that prints a Stack Trace to console
 - added requirements.txt as option for getting project requirements
