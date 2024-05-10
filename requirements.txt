@@ -9,3 +9,4 @@ robotframework-stacktrace==0.4.1
 robotframework-tidy==4.11.0
 ruff==0.4.2
 python-dotenv==1.0.1
+robotframework-datadriver==1.11.1
