@@ -1,0 +1,5 @@
+*** Test Cases ***;${username};${password};${error_message};[Tags];[Documentation];
+Blank username and pass;"";"";OPPPS!;functional;;
+Wrong username;name;Correct pass;OPPPS!;functional;;
+Wrong password;Correct name;cool_pass;OPPPS!;functional;cool doc;
+Wrong username and password;name;cool_pass;OPPPS!;functional;;
