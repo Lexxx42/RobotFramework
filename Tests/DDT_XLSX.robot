@@ -1,9 +1,9 @@
 *** Settings ***
-Documentation    Data Driven Testing form csv file.
+Documentation    Data Driven Testing form xlsx file.
 Resource    ../Resources/CommonFunctionality.resource
 Resource    ../Resources/Utility/SecretsGetter.resource
 Variables    ../Resources/Locators/demoqa_locators.py
-Library    DataDriver    ../TestData/login_data.csv
+Library    DataDriver    ../TestData/login_data.xlsx    sheet_name=Sheet1
 
 Suite Setup    CommonFunctionality.Start test case    https://demoqa.com/login
 Suite Teardown    CommonFunctionality.Finish test case
