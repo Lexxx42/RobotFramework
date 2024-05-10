@@ -9,8 +9,8 @@ Variables    ../Locators/ebay_locators.py
 Input text and click search
     [Arguments]    ${text}
 
-    Input Text    ${SearchField}    ${text}
-    Press Keys    ${SearchButton}    Return
+    Input Text    ${SEARCH_FIELD}    ${text}
+    Press Keys    ${SEARCH_BUTTON}    Return
 
 Click on advanced search link
-    Click Element    ${AdvancedSearchLink}
+    Click Element    ${ADVANCED_SEARCH_LINK}

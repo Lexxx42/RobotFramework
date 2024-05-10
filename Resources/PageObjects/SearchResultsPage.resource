@@ -18,7 +18,7 @@ Select product condition
 
     ${locator} =  Format String  ${DROPDOWN_OPTION}    text=${text}
 
-    Press Keys    ${ProductConditionsDropdown}    Return
+    Press Keys    ${PRODUCT_CONDITIONS_DROPDOWN}    Return
     Press Keys    ${locator}    Return
 
 Select delivery option
@@ -26,7 +26,7 @@ Select delivery option
 
     ${locator} =  Format String  ${DROPDOWN_OPTION}    text=${text}
 
-    Press Keys    ${ShipmentsDropdown}    Return
+    Press Keys    ${SHIPMENTS_DROPDOWN}    Return
     Press Keys    ${locator}    Return
 
 Verify filter results
