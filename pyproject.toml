@@ -11,7 +11,7 @@ robotframework = "^7.0"
 robotframework-seleniumlibrary = "^6.3.0"
 robotframework-stacktrace = "^0.4.1"
 python-dotenv = "^1.0.1"
-robotframework-datadriver = "^1.11.1"
+robotframework-datadriver = {extras = ["xls"], version = "^1.11.1"}
 
 [tool.poetry.group.formatting.dependencies]
 isort = "^5.13.2"
