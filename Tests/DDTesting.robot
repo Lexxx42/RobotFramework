@@ -1,8 +1,8 @@
 *** Settings ***
 Documentation    Data Driven Testing.
 Resource    ../Resources/CommonFunctionality.resource
+Resource    ../Resources/Utility/SecretsGetter.resource
 Variables    ../Resources/Locators/demoqa_locators.py
-Library    ../Resources/Utility/secret_reader.py
 
 Suite Setup    CommonFunctionality.Start test case    https://demoqa.com/login
 Suite Teardown    CommonFunctionality.Finish test case
@@ -26,10 +26,10 @@ Invalid login scenarios
     [Arguments]    ${username}    ${password}    ${error message}
 
     IF    $username == $correct_name
-        ${username}    Get correct name
+        ${username}    SecretsGetter.Get correct name
 
     ELSE IF    $password == $correct_pass
-        ${password}    Get correct pass
+        ${password}    SecretsGetter.Get correct pass
 
     END
     
@@ -41,13 +41,3 @@ Invalid login scenarios
     Click Button    ${BUTTON_LOGIN}
 
     Wait Until Element Is Visible    locator=${ERROR_MESSAGE_PAGE}    error=${error message}
-
-Get correct name
-    ${CORRECT_NAME}    get_env_value    env_var_name=USER_NAME
-
-    RETURN    ${CORRECT_NAME}
-
-Get correct pass
-    ${CORRECT_PASS}    get_env_value    env_var_name=PASSWORD
-
-    RETURN    ${CORRECT_PASS}
