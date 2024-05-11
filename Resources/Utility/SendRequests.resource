@@ -16,6 +16,6 @@ Check response status code
     check_status_code    exp_code=${exp_code}
 
 Check model is valid
-    [Arguments]    ${validation_model}=${None}
+    [Arguments]    ${validation_model}=${None}    ${is_error_model}=False
 
-    check_response_model_is_valid    validation_model=${validation_model}
+    check_response_model_is_valid    validation_model=${validation_model}    is_error_model=${is_error_model}

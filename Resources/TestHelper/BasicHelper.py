@@ -1,4 +1,3 @@
-from pydantic import BaseModel
 from robot.api.deco import keyword
 
 from Resources.Api.reqres_api import ReqresApi
@@ -30,12 +29,12 @@ class BasicHelper:
         self.response.assert_status_code(expected_code=exp_code)
 
     @keyword
-    def check_response_model_is_valid(self, validation_model: type[Model] | None = None):
+    def check_response_model_is_valid(self, validation_model: type[Model] | None = None, is_error_model: bool = False):
         if self.response is None:
             raise ValueError('You have to send request first!')
 
         if validation_model is not None and str(validation_model) != 'None':
-            self.response.assert_model_valid(expected_model=validation_model)
+            self.response.assert_model_valid(expected_model=validation_model, is_error_model=is_error_model)
 
         else:
-            self.response.assert_model_valid()
+            self.response.assert_model_valid(is_error_model=is_error_model)
