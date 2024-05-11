@@ -1,3 +1,13 @@
+version: 1.2.0
+- added configs for pylint and mypy
+- added pydantic to requirements
+- added loguru to requirements
+- added requests to requirements
+- added types-requests to requirements
+- added methods for work with pydantic models
+- added custom Response and Request classes
+- added proxy for python libs as RF keywords
+
 version: 1.1.0
 - added extension XLS for robotframework-datadriver to read test data from sheets
 - added module for ddt using .xlsx file as source of test data

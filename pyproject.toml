@@ -12,6 +12,10 @@ robotframework-seleniumlibrary = "^6.3.0"
 robotframework-stacktrace = "^0.4.1"
 python-dotenv = "^1.0.1"
 robotframework-datadriver = {extras = ["xls"], version = "^1.11.1"}
+requests = "^2.31.0"
+loguru = "^0.7.2"
+pydantic = {extras = ["email"], version = "^2.7.1"}
+
 
 [tool.poetry.group.formatting.dependencies]
 isort = "^5.13.2"
@@ -25,6 +29,7 @@ pyright = "^1.1.360"
 pylint = "^3.1.0"
 ruff = "^0.4.2"
 robotframework-robocop = "^5.0.4"
+types-requests = "^2.31.0.20240406"
 
 [build-system]
 requires = ["poetry-core"]

@@ -10,3 +10,7 @@ robotframework-tidy==4.11.0
 ruff==0.4.2
 python-dotenv==1.0.1
 robotframework-datadriver[XLS]==1.11.1
+requests==2.31.0
+loguru==0.7.2
+pydantic[email]==2.7.1
+types-requests==2.31.0.20240406
