@@ -1,3 +1,11 @@
+version: 1.2.2
+- added readme info
+
+version: 1.2.1
+- added error DTO
+- added response_error_model for api method
+- added flag of validation check to BasicHelper
+
 version: 1.2.0
 - added configs for pylint and mypy
 - added pydantic to requirements
